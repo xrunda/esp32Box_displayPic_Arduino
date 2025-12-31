@@ -1,0 +1,14 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/cu.usbmodem1101 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x420027d6: [0;33mesp_panic_handler[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m446[0m
+[0m--- 0x420405a2: [0;33mjpeg_decode_in_cb[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp_jpeg/jpeg_decoder.c[0m[0m:[1;31m180[0m
+[0m--- 0x400570e8: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x400570f3: [0;33mmemset[0m[0m in [0;32mROM[0m
+[0m--- 0x4204059f: [0;33mjpeg_decode_in_cb[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp_jpeg/jpeg_decoder.c[0m[0m:[1;31m177[0m
+[0m--- 0x420286e9: [0;33mjd_prepare[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/extra/libs/sjpg/tjpgd.c[0m[0m:[1;31m988[0m
+[0m--- 0x4204067f: [0;33mesp_jpeg_decode[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp_jpeg/jpeg_decoder.c[0m[0m:[1;31m97[0m
+[0m--- 0x4200902b: [0;33mcreate_ui[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/main/display_image.c[0m[0m:[1;31m252[0m
+[0m--- 0x4200930f: [0;33mapp_main[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/main/display_image.c[0m[0m:[1;31m356[0m
+[0m--- 0x4205eb07: [0;33mmain_task[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40382841: [0;33mvPortTaskWrapper[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

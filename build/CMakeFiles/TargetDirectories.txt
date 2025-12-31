@@ -912,6 +912,13 @@
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp-box-3/CMakeFiles/install.dir
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp-box-3/CMakeFiles/install/local.dir
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp-box-3/CMakeFiles/install/strip.dir
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_jpeg/CMakeFiles/__idf_espressif__esp_jpeg.dir
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_jpeg/CMakeFiles/edit_cache.dir
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_jpeg/CMakeFiles/rebuild_cache.dir
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_jpeg/CMakeFiles/list_install_components.dir
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_jpeg/CMakeFiles/install.dir
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_jpeg/CMakeFiles/install/local.dir
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_jpeg/CMakeFiles/install/strip.dir
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

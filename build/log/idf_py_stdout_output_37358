@@ -1,0 +1,62 @@
+[1/5] cd /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/esptool_py && /Users/liguang/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/partition_table/partition-table.bin /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/displayPic.bin
+displayPic.bin binary size 0x8d2d0 bytes. Smallest app partition is 0x100000 bytes. 0x72d30 bytes (45%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/bootloader/esp-idf/esptool_py && /Users/liguang/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/bootloader/bootloader.bin
+Bootloader binary size 0x5710 bytes. 0x28f0 bytes (32%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/liguang/Documents/xRunda/project/AI/github/esp-idf -D "SERIAL_TOOL=/Users/liguang/.espressif/python_env/idf5.4_py3.13_env/bin/python;;/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build -P /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem1101 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x10000 displayPic.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/cu.usbmodem1101
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 16MB (AP_1v8)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 74:4d:bd:2e:08:b8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0009dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22288 bytes to 14137...
+Writing at 0x00000000... (100 %)
+Wrote 22288 bytes (14137 compressed) at 0x00000000 in 0.3 seconds (effective 519.9 kbit/s)...
+Hash of data verified.
+Compressed 578256 bytes to 336721...
+Writing at 0x00010000... (4 %)
+Writing at 0x0001cda1... (9 %)
+Writing at 0x00024cce... (14 %)
+Writing at 0x0002deed... (19 %)
+Writing at 0x00033bd6... (23 %)
+Writing at 0x0003a47d... (28 %)
+Writing at 0x0004003e... (33 %)
+Writing at 0x0004640a... (38 %)
+Writing at 0x0004bd2e... (42 %)
+Writing at 0x00051bec... (47 %)
+Writing at 0x0005795a... (52 %)
+Writing at 0x0005d91d... (57 %)
+Writing at 0x00063525... (61 %)
+Writing at 0x00068f76... (66 %)
+Writing at 0x0006f0e4... (71 %)
+Writing at 0x00075754... (76 %)
+Writing at 0x0007bced... (80 %)
+Writing at 0x00085a88... (85 %)
+Writing at 0x0008cedb... (90 %)
+Writing at 0x00093034... (95 %)
+Writing at 0x00099b02... (100 %)
+Wrote 578256 bytes (336721 compressed) at 0x00010000 in 3.9 seconds (effective 1176.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 116...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (116 compressed) at 0x00008000 in 0.1 seconds (effective 447.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

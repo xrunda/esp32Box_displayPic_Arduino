@@ -94,4 +94,5 @@ $<TARGET_FILE:__idf_espressif__esp_lcd_touch>
 $<TARGET_FILE:__idf_espressif__esp_lcd_touch_gt911>
 $<TARGET_FILE:__idf_espressif__esp_lcd_touch_tt21100>
 $<TARGET_FILE:__idf_espressif__esp-box-3>
+$<TARGET_FILE:__idf_espressif__esp_jpeg>
 $<TARGET_FILE:__idf_main>

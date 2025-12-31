@@ -1,0 +1,5 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/cu.usbmodem1101 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4037eb1e: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m64[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is 1a0d35aebae9ea509f27539e5600fad28a73de50e8cad1d728b9d690634b5705[0m
+[0m

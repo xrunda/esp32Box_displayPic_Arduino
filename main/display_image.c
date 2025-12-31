@@ -13,18 +13,28 @@
 #include <stdbool.h>
 #include "esp_spiffs.h"
 #include "esp_vfs.h"
+#include <dirent.h>
+#include <sys/stat.h>
+#include <inttypes.h>
 
 static const char *TAG = "display_image";
 
 // LVGL file system interface
 static void *fs_open_cb(lv_fs_drv_t *drv, const char *path, lv_fs_mode_t mode)
 {
-    // LVGL passes path without drive letter, e.g., "/mengm.jpg"
+    // LVGL passes path with drive letter removed, e.g., "/mengm.jpg" for "S:/mengm.jpg"
     // We need to prepend "/spiffs" to match our SPIFFS mount point
     char full_path[256];
-    snprintf(full_path, sizeof(full_path), "/spiffs%s", path);
     
-    ESP_LOGI(TAG, "Opening file: %s (full path: %s)", path, full_path);
+    // Remove leading slash if present (LVGL may pass "/mengm.jpg" or "mengm.jpg")
+    const char *path_ptr = path;
+    if (path[0] == '/') {
+        path_ptr = path + 1;
+    }
+    
+    snprintf(full_path, sizeof(full_path), "/spiffs/%s", path_ptr);
+    
+    ESP_LOGI(TAG, "LVGL requested path: %s, full path: %s", path, full_path);
     
     const char *flags = "";
     if (mode == LV_FS_MODE_WR) {
@@ -132,33 +142,87 @@ static void register_lvgl_fs(void)
 }
 
 /**
+ * @brief Check if file exists in SPIFFS
+ */
+static bool check_file_exists(const char *path)
+{
+    FILE *f = fopen(path, "rb");
+    if (f != NULL) {
+        fclose(f);
+        return true;
+    }
+    return false;
+}
+
+/**
  * @brief Create UI with image display
+ * Since the image is now 320x240 (same as screen), we can use LVGL's built-in decoder directly
  */
 static void create_ui(void)
 {
     lv_obj_t *screen = lv_scr_act();
     
-    // Set screen background color
+    // Set screen background color to black (will be covered by image)
     lv_obj_set_style_bg_color(screen, lv_color_hex(0x000000), LV_PART_MAIN);
     lv_obj_set_style_bg_opa(screen, LV_OPA_COVER, LV_PART_MAIN);
     lv_obj_clear_flag(screen, LV_OBJ_FLAG_SCROLLABLE);
-
-    // Create image object
+    
+    ESP_LOGI(TAG, "Screen resolution: %dx%d", BSP_LCD_H_RES, BSP_LCD_V_RES);
+    
+    // Check if image file exists
+    const char *spiffs_path = "/spiffs/mengm.jpg";
+    if (!check_file_exists(spiffs_path)) {
+        ESP_LOGE(TAG, "Image file not found: %s", spiffs_path);
+        // Create a label to show error
+        lv_obj_t *label = lv_label_create(screen);
+        lv_label_set_text(label, "Image not found!\nPlease upload mengm.jpg");
+        lv_obj_center(label);
+        return;
+    }
+    
+    ESP_LOGI(TAG, "Image file found: %s", spiffs_path);
+    
+    // Get file size for logging
+    struct stat st;
+    if (stat(spiffs_path, &st) == 0) {
+        ESP_LOGI(TAG, "Image file size: %" PRIu32 " bytes", (uint32_t)st.st_size);
+    }
+    
+    // Use LVGL's built-in JPEG decoder via file system
+    // LVGL will handle the decoding automatically when we set the image source
+    const char *lvgl_path = "S:/mengm.jpg";  // Use LVGL file system path
+    
+    // Get image info to print dimensions
+    lv_img_header_t header;
+    lv_res_t res = lv_img_decoder_get_info(lvgl_path, &header);
+    if (res == LV_RES_OK) {
+        ESP_LOGI(TAG, "Image dimensions from decoder: %dx%d", header.w, header.h);
+        ESP_LOGI(TAG, "Screen resolution: %dx%d", BSP_LCD_H_RES, BSP_LCD_V_RES);
+        if (header.w == BSP_LCD_H_RES && header.h == BSP_LCD_V_RES) {
+            ESP_LOGI(TAG, "Image size matches screen resolution - perfect fit!");
+        } else {
+            ESP_LOGW(TAG, "Image size (%dx%d) does NOT match screen (%dx%d) - may need to resize image or re-upload", 
+                     header.w, header.h, BSP_LCD_H_RES, BSP_LCD_V_RES);
+        }
+    } else {
+        ESP_LOGW(TAG, "Failed to get image info, will try to display anyway");
+    }
+    
+    ESP_LOGI(TAG, "Creating LVGL image object and setting source to: %s", lvgl_path);
+    
+    // Create an image object
     lv_obj_t *img = lv_img_create(screen);
     
-    // Try to load image from SPIFFS
-    // The image should be stored at /spiffs/mengm.jpg
-    // LVGL file system path format: S:/path (where S: is the registered drive letter)
-    const char *img_path = "S:/mengm.jpg";
-    lv_img_set_src(img, img_path);
+    // Set the image source - LVGL will decode the JPEG automatically
+    lv_img_set_src(img, lvgl_path);
     
     // Center the image
     lv_obj_center(img);
     
-    // Set image zoom if needed (optional)
-    // lv_img_set_zoom(img, 128); // 128 = 100% (no zoom)
+    // Invalidate to trigger refresh
+    lv_obj_invalidate(img);
     
-    ESP_LOGI(TAG, "Image object created, trying to load: %s", img_path);
+    ESP_LOGI(TAG, "Image source set, LVGL will decode and display asynchronously");
 }
 
 void app_main(void)
@@ -174,6 +238,17 @@ void app_main(void)
     esp_err_t ret = init_spiffs();
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "SPIFFS initialization failed, continuing anyway...");
+    } else {
+        // List files in SPIFFS to verify image is there
+        DIR *dir = opendir("/spiffs");
+        if (dir != NULL) {
+            ESP_LOGI(TAG, "SPIFFS files:");
+            struct dirent *entry;
+            while ((entry = readdir(dir)) != NULL) {
+                ESP_LOGI(TAG, "  - %s", entry->d_name);
+            }
+            closedir(dir);
+        }
     }
 
     /* Initialize display and LVGL */
@@ -228,17 +303,13 @@ void app_main(void)
     ESP_LOGI(TAG, "Creating UI...");
     bsp_display_lock(0);
     create_ui();
+    // Just invalidate to trigger refresh - LVGL will handle it asynchronously
     lv_obj_invalidate(lv_scr_act());
     bsp_display_unlock();
 
-    vTaskDelay(pdMS_TO_TICKS(1000));
-
-    bsp_display_lock(0);
-    lv_refr_now(default_disp);
-    ESP_LOGI(TAG, "Forced LVGL display refresh");
-    bsp_display_unlock();
-
-    vTaskDelay(pdMS_TO_TICKS(1000));
+    // Don't call lv_refr_now() here - it blocks and causes watchdog timeout
+    // LVGL will refresh the display in its background task
+    ESP_LOGI(TAG, "UI created, LVGL will refresh asynchronously");
 
     ESP_LOGI(TAG, "Image Display Example Initialized");
     ESP_LOGI(TAG, "Make sure mengm.jpg is uploaded to SPIFFS partition");

@@ -77,5 +77,6 @@ source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Ar
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__cmake_utilities/Kconfig"
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp-box-3/Kconfig"
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp_codec_dev/Kconfig"
+source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp_jpeg/Kconfig"
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp_lcd_touch/Kconfig"
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/Kconfig"

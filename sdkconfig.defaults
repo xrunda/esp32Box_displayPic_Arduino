@@ -33,3 +33,7 @@ CONFIG_BSP_LCD_DRAW_BUF_HEIGHT=10
 # Audio Codec - Use backward compatible I2C driver
 CONFIG_CODEC_I2C_BACKWARD_COMPATIBLE=y
 
+# Task Watchdog - Increase timeout for JPEG decoding
+# JPEG decoding can take a long time, especially for large images
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=30
+

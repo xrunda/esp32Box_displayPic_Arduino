@@ -9,4 +9,5 @@ dependencies:
     version: "^8"
   espressif/esp_lvgl_port:
     version: "^1"
+  esp_jpeg: "*"
 
