@@ -1,0 +1,20 @@
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Error at /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/tools/cmake/build.cmake:318 (message):
+  Failed to resolve component 'cJSON' required by component 'main': unknown
+  name.
+Call Stack (most recent call first):
+  /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/tools/cmake/build.cmake:367 (__build_resolve_and_add_req)
+  /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/tools/cmake/build.cmake:665 (__build_expand_requirements)
+  /Users/liguang/Documents/xRunda/project/AI/github/esp-idf/tools/cmake/project.cmake:717 (idf_build_process)
+  CMakeLists.txt:10 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

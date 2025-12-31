@@ -84,6 +84,8 @@
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/touch_element/libtouch_element.a
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/usb/libusb.a
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/mcp_client/libmcp_client.a
+/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/windmill_control/libwindmill_control.a
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__button/libespressif__button.a
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__esp_codec_dev/libespressif__esp_codec_dev.a
 /Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/lvgl__lvgl/liblvgl__lvgl.a

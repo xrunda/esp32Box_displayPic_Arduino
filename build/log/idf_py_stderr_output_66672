@@ -1,0 +1,31 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/cu.usbmodem1101 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40380926: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m64[0m
+[0m--- 0x4201489a: [0;33mget_prop_core[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_obj_style.c[0m[0m:[1;31m630[0m
+[0m--- 0x40056f5c: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x40056f72: [0;33mmemcpy[0m[0m in [0;32mROM[0m
+[0m--- 0x42014897: [0;33mget_prop_core[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_obj_style.c[0m[0m:[1;31m630[0m
+[0m--- 0x420148cf: [0;33mlv_obj_get_style_prop[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_obj_style.c[0m[0m:[1;31m229[0m
+[0m--- 0x4200fbcc: [0;33mlv_obj_get_style_transform_width[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_obj_style_gen.h[0m[0m:[1;31m57[0m
+[0m--- (inlined by) [0;33mlv_obj_draw[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_obj.c[0m[0m:[1;31m497[0m
+[0m--- 0x420107b6: [0;33mlv_obj_event[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_obj.c[0m[0m:[1;31m873[0m
+[0m--- 0x420da8ad: [0;33mlv_obj_event_base[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_event.c[0m[0m:[1;31m96[0m
+[0m--- 0x4200d90a: [0;33mevent_send_core[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_event.c[0m[0m:[1;31m452[0m
+[0m--- 0x4200d9ea: [0;33mlv_event_send[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_event.c[0m[0m:[1;31m74[0m
+[0m--- 0x4201579e: [0;33mlv_refr_get_top_obj[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_refr.c[0m[0m:[1;31m817[0m
+[0m--- 0x420162e5: [0;33mrefr_area_part[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_refr.c[0m[0m:[1;31m730[0m
+[0m--- 0x42016583: [0;33mrefr_area[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_refr.c[0m[0m:[1;31m678[0m
+[0m--- 0x42016691: [0;33mrefr_invalid_areas[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_refr.c[0m[0m:[1;31m616[0m
+[0m--- 0x42016842: [0;33m_lv_disp_refr_timer[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/core/lv_refr.c[0m[0m:[1;31m324[0m
+[0m--- 0x4201b53d: [0;33mlv_timer_exec[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/misc/lv_timer.c[0m[0m:[1;31m313[0m
+[0m--- 0x4201b5ea: [0;33mlv_timer_handler[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/lvgl__lvgl/src/misc/lv_timer.c[0m[0m:[1;31m109[0m
+[0m--- 0x4200d758: [0;33mlvgl_port_task[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c[0m[0m:[1;31m691[0m
+[0m--- 0x40384b49: [0;33mvPortTaskWrapper[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x40380926: [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m64[0m
+[0m--- 0x4037a328: [0;33mipc_task[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_system/esp_ipc.c[0m[0m:[1;31m53[0m
+[0m--- 0x40380923: [0;33mxt_utils_wait_for_intr[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/xtensa/include/xt_utils.h[0m[0m:[1;31m82[0m
+[0m--- (inlined by) [0;33mesp_cpu_wait_for_intr[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_hw_support/cpu.c[0m[0m:[1;31m55[0m
+[0m--- 0x4200393a: [0;33mesp_vApplicationIdleHook[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_system/freertos_hooks.c[0m[0m:[1;31m58[0m
+[0m--- 0x40385d41: [0;33mprvIdleTask[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m4353[0m
+[0m--- 0x40384b49: [0;33mvPortTaskWrapper[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

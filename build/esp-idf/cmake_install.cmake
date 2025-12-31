@@ -554,6 +554,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/mcp_client/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/windmill_control/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build/esp-idf/espressif__cmake_utilities/cmake_install.cmake")
 endif()
 

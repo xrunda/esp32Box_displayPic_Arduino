@@ -1,0 +1,228 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380926
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe24
+load:0x403cb700,len:0x317c
+entry 0x403c893c
+[0;32mI (19) boot: ESP-IDF v5.4-398-g473771bc14 2nd stage bootloader[0m
+[0;32mI (19) boot: compile time Dec 31 2025 17:27:28[0m
+[0;32mI (19) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v0.2[0m
+[0;32mI (19) boot: efuse block revision: v1.3[0m
+[0;32mI (20) qio_mode: Enabling QIO for flash chip GD[0m
+[0;32mI (20) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (20) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (20) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (20) boot: Enabling RNG early entropy source...[0m
+[0;32mI (20) boot: Partition Table:[0m
+[0;32mI (21) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (21) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (21) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (22) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (22) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (22) boot: End of partition table[0m
+[0;32mI (23) esp_image: segment 0: paddr=00010020 vaddr=3c0f0020 size=3f700h (259840) map[0m
+[0;32mI (62) esp_image: segment 1: paddr=0004f728 vaddr=3fca2700 size=008f0h (  2288) load[0m
+[0;32mI (63) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=ee298h (975512) map[0m
+[0;32mI (208) esp_image: segment 3: paddr=0013e2c0 vaddr=3fca2ff0 size=04a64h ( 19044) load[0m
+[0;32mI (211) esp_image: segment 4: paddr=00142d2c vaddr=40378000 size=1a638h (108088) load[0m
+[0;32mI (232) esp_image: segment 5: paddr=0015d36c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (243) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (243) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (244) octal_psram: dev id       : 0x03 (generation 4)[0m
+[0;32mI (244) octal_psram: density      : 0x05 (128 Mbit)[0m
+[0;32mI (244) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (244) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (245) octal_psram: VCC          : 0x00 (1.8V)[0m
+[0;32mI (245) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (245) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (245) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (245) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (246) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (247) MSPI Timing: PSRAM timing tuning index: 6[0m
+[0;32mI (247) esp_psram: Found 16MB PSRAM device[0m
+[0;32mI (247) esp_psram: Speed: 80MHz[0m
+[0;32mI (247) cpu_start: Multicore app[0m
+[0;32mI (844) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (852) cpu_start: Pro cpu start user code[0m
+[0;32mI (852) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (853) app_init: Application information:[0m
+[0;32mI (853) app_init: Project name:     displayPic[0m
+[0;32mI (853) app_init: App version:      f059e0e-dirty[0m
+[0;32mI (853) app_init: Compile time:     Dec 31 2025 17:34:32[0m
+[0;32mI (853) app_init: ELF file SHA256:  b757575c5...[0m
+[0;32mI (853) app_init: ESP-IDF:          v5.4-398-g473771bc14[0m
+[0;32mI (854) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (854) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (854) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (854) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (854) heap_init: At 3FCAC320 len 0003D3F0 (244 KiB): RAM[0m
+[0;32mI (854) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (855) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (855) esp_psram: Adding pool of 16384K of PSRAM memory to heap allocator[0m
+[0;32mI (856) spi_flash: detected chip: gd[0m
+[0;32mI (856) spi_flash: flash io: qio[0m
+[0;33mW (856) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (857) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (857) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (858) main_task: Started on CPU0[0m
+[0;32mI (868) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (868) main_task: Calling app_main()[0m
+[0;32mI (868) display_image: Network Image Display Example Started[0m
+[0;32mI (888) display_image: Initializing I2C...[0m
+[0;32mI (888) display_image: I2C initialized[0m
+[0;32mI (888) display_image: Initializing SPIFFS[0m
+[0;32mI (938) display_image: Partition size: total: 956561, used: 25351[0m
+[0;32mI (938) display_image: Initializing display...[0m
+[0;32mI (938) LVGL: Starting LVGL task[0m
+[0;33mW (938) ledc: GPIO 47 is not usable, maybe conflict with others[0m
+[0;32mI (948) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (948) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (948) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;33mW (1068) ili9341: The 36h command has been used and will be overwritten by external initialization sequence[0m
+[0;33mW (1068) ili9341: The 3Ah command has been used and will be overwritten by external initialization sequence[0m
+[0;32mI (1068) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[0;32mI (1068) gpio: GPIO[3]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1068) GT911: TouchPad_ID:0x39,0x31,0x31[0m
+[0;32mI (1068) GT911: TouchPad_Config_Version:65[0m
+[0;32mI (1068) display_image: Display initialized successfully[0m
+[0;32mI (1068) display_image: LVGL file system driver registered with letter 'S'[0m
+[0;32mI (1268) display_image: Setting display brightness to 100%...[0m
+[0;32mI (1268) ESP-BOX-3: Setting LCD backlight: 100%[0m
+[0;32mI (1268) display_image: Backlight turned on successfully[0m
+[0;32mI (2268) display_image: Creating UI...[0m
+[0;32mI (2268) display_image: Screen resolution: 320x240[0m
+[0;32mI (2268) display_image: UI created, waiting for image upload[0m
+[0;32mI (2268) display_image: UI created, LVGL will refresh asynchronously[0m
+[0;32mI (2268) display_image: Initializing WiFi...[0m
+[0;32mI (2268) pp: pp rom version: e7ae62f[0m
+[0;32mI (2268) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (2278) wifi:wifi driver task: 3fcc3198, prio:23, stack:6656, core=0[0m
+[0;32mI (2288) wifi:wifi firmware version: 90929ad727[0m
+[0;32mI (2288) wifi:wifi certification version: v7.0[0m
+[0;32mI (2288) wifi:config NVS flash: enabled[0m
+[0;32mI (2288) wifi:config nano formatting: disabled[0m
+[0;32mI (2288) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2288) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2288) wifi:Init management short buffer num: 32[0m
+[0;32mI (2288) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2288) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (2288) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2288) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2288) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2288) wifi_init: rx ba win: 6[0m
+[0;32mI (2288) wifi_init: accept mbox: 6[0m
+[0;32mI (2288) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2288) wifi_init: udp mbox: 6[0m
+[0;32mI (2288) wifi_init: tcp mbox: 6[0m
+[0;32mI (2288) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2288) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2288) wifi_init: tcp mss: 1440[0m
+[0;32mI (2288) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2288) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2288) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (2328) wifi:mode : sta (74:4d:bd:2e:08:b8)[0m
+[0;32mI (2328) wifi:enable tsf[0m
+[0;32mI (2328) display_image: WiFi initialization finished. Connecting to CU_thEy...[0m
+[0;32mI (2338) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2338) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2348) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2348) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2358) wifi:<ba-add>idx:0 (ifx:0, 10:47:e7:5a:a4:2f), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2378) wifi:connected with CU_thEy, aid = 4, channel 6, BW20, bssid = 10:47:e7:5a:a4:2f[0m
+[0;32mI (2378) wifi:security: WPA2-PSK, phy: bgn, rssi: -44[0m
+[0;32mI (2378) wifi:pm start, type: 1[0m
+
+[0;32mI (2378) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2378) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (2428) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5388) esp_netif_handlers: sta ip: 192.168.1.31, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5388) display_image: Got IP address: 192.168.1.31[0m
+[0;32mI (7328) display_image: Starting HTTP server on port: '80'[0m
+[0;32mI (7328) display_image: HTTP server started[0m
+[0;32mI (7328) display_image: Endpoints: POST /upload (file), POST /upload_url (URL), GET /status[0m
+[0;32mI (7328) display_image: Initializing windmill control (MCP client)...[0m
+[0;32mI (7328) windmill_control: Initializing windmill control...[0m
+[0;32mI (7328) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (7328) windmill_control: Windmill GPIO 21 initialized[0m
+[0;32mI (7328) mcp_client: Initializing MCP client...[0m
+[0;32mI (7328) mcp_client: Server: wss://api.xiaozhi.me/mcp/[0m
+[0;32mI (7328) mcp_client: Tools: 1[0m
+[0;32mI (7328) mcp_client: Attempting to connect to MCP server...[0m
+[0;32mI (7328) mcp_client: Connecting to MCP server: wss://api.xiaozhi.me/mcp/[0m
+[0;32mI (7328) mcp_client: MCP client initialized[0m
+[0;32mI (7328) windmill_control: Windmill control initialized[0m
+[0;32mI (7328) display_image: Windmill control initialized successfully[0m
+[0;32mI (7328) display_image: Network Image Display Example Initialized[0m
+[0;32mI (7328) display_image: Upload images via HTTP POST to /upload[0m
+[0;32mI (7328) display_image: Check status via HTTP GET /status[0m
+[0;32mI (7328) display_image: Windmill control via MCP WebSocket initialized[0m
+[0;32mI (7328) main_task: Returned from app_main()[0m
+[0;32mI (7628) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8268) mcp_client: Connected to MCP server[0m
+[0;32mI (8268) mcp_client: Received: {"id":0,"jsonrpc":"2.0","method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{"sampling":{},"roots":{"listChanged":false}},"clientInfo":{"name":"xz-mcp-broker","version":"0.0.[0m
+[0;32mI (8268) mcp_client: Received initialize request, sending response[0m
+[0;32mI (8278) mcp_client: Sent initialized notification[0m
+[0;32mI (8428) mcp_client: Received: {"jsonrpc":"2.0","method":"notifications/initialized"}[0m
+[0;32mI (8428) mcp_client: Received MCP method: notifications/initialized[0m
+[0;33mW (8428) mcp_client: Unknown method: notifications/initialized[0m
+[0;32mI (8428) mcp_client: Received: {"id":1,"jsonrpc":"2.0","method":"tools/list","params":{}}[0m
+[0;32mI (8428) mcp_client: Received MCP method: tools/list[0m
+[0;32mI (8428) mcp_client: Responding to tools/list with 1 tools[0m
+[0;32mI (8628) display_image: Received image URL upload request[0m
+[0;32mI (8628) display_image: Received data: {"url": "http://res.xrunda.com/ai-test/rs2026.jpg"}[0m
+[0;32mI (8628) display_image: Image URL: http://res.xrunda.com/ai-test/rs2026.jpg[0m
+[0;32mI (8628) display_image: Downloading image from URL: http://res.xrunda.com/ai-test/rs2026.jpg[0m
+[0;32mI (8638) display_image: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (8658) display_image: Image size from header: 25083 bytes[0m
+[0;32mI (8708) display_image: HTTP_EVENT_ON_FINISH, received 25083 bytes[0m
+[0;32mI (8708) display_image: Downloaded 25083 bytes, displaying image...[0m
+[0;32mI (8768) mcp_client: MCP connection established[0m
+[0;32mI (9048) display_image: Image saved to /spiffs/temp_image.jpg, size: 25083 bytes[0m
+[0;32mI (10058) display_image: Cache synchronized, displaying image...[0m
+[0;32mI (10258) display_image: LVGL requested path: /temp_image.jpg, full path: /spiffs/temp_image.jpg[0m
+[0;32mI (10308) display_image: Image displayed from buffer[0m
+[0;32mI (10308) display_image: HTTP GET Status = 200, content_length = 25083[0m
+[0;32mI (10308) display_image: Download successful, received 25083 bytes[0m
+[0;32mI (10308) display_image: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (10308) display_image: LVGL requested path: /temp_image.jpg, full path: /spiffs/temp_image.jpg[0m
+[0;32mI (10308) display_image: LVGL requested path: /temp_image.jpg, full path: /spiffs/temp_image.jpg[0m
+Guru Meditation Error: Core  / panic'ed (Cache disabled but cached memory region accessed). 
+Write back error occurred while dcache tries to write back to flash
+The following backtrace may not indicate the code that caused Cache invalid access
+
+
+Core  0 register dump:
+PC      : 0x40380926  PS      : 0x00060934  A0      : 0x820038bd  A1      : 0x3fcb01f0  
+A2      : 0x00000000  A3      : 0xffffffff  A4      : 0x3fcaf950  A5      : 0x00060923  
+A6      : 0x00000048  A7      : 0x0000cdcd  A8      : 0x8204a0a2  A9      : 0x3fcb01b0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x80384f01  A13     : 0x3fcc0230  
+A14     : 0x00060023  A15     : 0x3fcb03c0  SAR     : 0x0000001f  EXCCAUSE: 0x00000007  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x40380923:0x3fcb01f0 0x420038ba:0x3fcb0210 0x40385d41:0x3fcb0230 0x40384b49:0x3fcb0250
+
+
+Core  1 register dump:
+PC      : 0x40056f5c  PS      : 0x00060434  A0      : 0x8202bb88  A1      : 0x3fcba9f0  
+A2      : 0x3c13f6a4  A3      : 0x3fcdd038  A4      : 0x00000030  A5      : 0x3c13f6b4  
+A6      : 0x744b206f  A7      : 0x4bb28860  A8      : 0x00000000  A9      : 0x3fcba9c0  
+A10     : 0x00000000  A11     : 0x3fcdc530  A12     : 0x00000200  A13     : 0x3fcba9f0  
+A14     : 0x00060023  A15     : 0x00000003  SAR     : 0x00000000  EXCCAUSE: 0x00000007  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0x00000001  
+
+
+Backtrace: 0x40056f59:0x3fcba9f0 0x4202bb85:0x3fcbaa00 0x4202cc65:0x3fcbaa20 0x4202d235:0x3fcbaa70 0x4202bad1:0x3fcbaaa0 0x420e244e:0x3fcbaad0 0x4201d163:0x3fcbaaf0 0x4201d204:0x3fcbab50 0x420227fd:0x3fcbab70 0x42022c9e:0x3fcbac00 0x420e1a39:0x3fcbac30 0x42013e6a:0x3fcbac50 0x42013f4a:0x3fcbac70 0x4201c47f:0x3fcbacb0 0x4201c535:0x3fcbacf0 0x4201c4e7:0x3fcbad40 0x4201c535:0x3fcbad80 0x4201c7a5:0x3fcbadd0 0x4201c9a6:0x3fcbadf0 0x4201cb1f:0x3fcbae60 0x4201cc2d:0x3fcbae90 0x4201cdde:0x3fcbaeb0 0x42021ad9:0x3fcbaee0 0x42021b86:0x3fcbaf00 0x42013cb8:0x3fcbaf20 0x40384b49:0x3fcbaf40
+
+
+
+
+ELF file SHA256: b757575c5
+

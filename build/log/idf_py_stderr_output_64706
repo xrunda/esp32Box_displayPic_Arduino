@@ -1,0 +1,11 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/cu.usbmodem1101 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x42002d9a: [0;33mesp_panic_handler[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m446[0m
+[0m--- 0x40379f9d: [0;33mpanic_abort[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m454[0m
+[0m--- 0x403840b1: [0;33mesp_system_abort[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m92[0m
+[0m--- 0x4038d141: [0;33m__assert_func[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/newlib/assert.c[0m[0m:[1;31m80[0m
+[0m--- 0x4200ce52: [0;33mbsp_display_start_with_config[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/managed_components/espressif__esp-box-3/esp-box-3.c[0m[0m:[1;31m576[0m
+[0m--- 0x4200a581: [0;33mapp_main[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/main/display_image.c[0m[0m:[1;31m251[0m
+[0m--- 0x420ebf73: [0;33mmain_task[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40384b49: [0;33mvPortTaskWrapper[0m[0m at [0;32m/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

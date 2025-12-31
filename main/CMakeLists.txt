@@ -3,5 +3,19 @@ idf_component_register(
         "display_image.c"
     INCLUDE_DIRS
         ""
+    PRIV_REQUIRES
+        esp_wifi
+        esp_event
+        nvs_flash
+        esp_netif
+        esp_http_server
+        esp_http_client
+        json
+        tcp_transport
+        esp-tls
+        esp_driver_gpio
+    REQUIRES
+        mcp_client
+        windmill_control
 )
 
