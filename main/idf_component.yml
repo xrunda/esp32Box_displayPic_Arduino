@@ -1,0 +1,12 @@
+## IDF Component Manager Manifest File
+dependencies:
+  idf: ">=5.0"
+  espressif/esp-box-3:
+    version: "*"
+  espressif/button:
+    version: ">=2.5,<4.0"
+  lvgl/lvgl:
+    version: "^8"
+  espressif/esp_lvgl_port:
+    version: "^1"
+
