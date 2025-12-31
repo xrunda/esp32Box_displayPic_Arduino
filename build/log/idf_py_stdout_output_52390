@@ -1,0 +1,177 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380926
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe24
+load:0x403cb700,len:0x317c
+entry 0x403c893c
+[0;32mI (19) boot: ESP-IDF v5.4-398-g473771bc14 2nd stage bootloader[0m
+[0;32mI (19) boot: compile time Dec 31 2025 09:50:02[0m
+[0;32mI (19) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v0.2[0m
+[0;32mI (19) boot: efuse block revision: v1.3[0m
+[0;32mI (20) qio_mode: Enabling QIO for flash chip GD[0m
+[0;32mI (20) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (20) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (20) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (20) boot: Enabling RNG early entropy source...[0m
+[0;32mI (20) boot: Partition Table:[0m
+[0;32mI (21) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (21) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (21) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (22) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (22) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (22) boot: End of partition table[0m
+[0;32mI (23) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=28378h (164728) map[0m
+[0;32mI (47) esp_image: segment 1: paddr=000383a0 vaddr=3fca2700 size=05324h ( 21284) load[0m
+[0;32mI (52) esp_image: segment 2: paddr=0003d6cc vaddr=40378000 size=0294ch ( 10572) load[0m
+[0;32mI (54) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=cea80h (846464) map[0m
+[0;32mI (180) esp_image: segment 4: paddr=0010eaa8 vaddr=4037a94c size=17cech ( 97516) load[0m
+[0;32mI (199) esp_image: segment 5: paddr=0012679c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (209) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (209) boot: Disabling RNG early entropy source...[0m
+[0;32mI (210) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (210) octal_psram: dev id       : 0x03 (generation 4)[0m
+[0;32mI (211) octal_psram: density      : 0x05 (128 Mbit)[0m
+[0;32mI (211) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (211) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (211) octal_psram: VCC          : 0x00 (1.8V)[0m
+[0;32mI (211) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (212) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (212) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (212) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (212) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (213) MSPI Timing: PSRAM timing tuning index: 6[0m
+[0;32mI (213) esp_psram: Found 16MB PSRAM device[0m
+[0;32mI (214) esp_psram: Speed: 80MHz[0m
+[0;32mI (214) cpu_start: Multicore app[0m
+[0;32mI (811) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (819) cpu_start: Pro cpu start user code[0m
+[0;32mI (819) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (819) app_init: Application information:[0m
+[0;32mI (819) app_init: Project name:     displayPic[0m
+[0;32mI (820) app_init: App version:      88ef62f-dirty[0m
+[0;32mI (820) app_init: Compile time:     Dec 31 2025 10:46:31[0m
+[0;32mI (820) app_init: ELF file SHA256:  f71a6298f...[0m
+[0;32mI (820) app_init: ESP-IDF:          v5.4-398-g473771bc14[0m
+[0;32mI (820) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (820) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (821) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (821) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (821) heap_init: At 3FCABCB0 len 0003DA60 (246 KiB): RAM[0m
+[0;32mI (821) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (821) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (822) esp_psram: Adding pool of 16384K of PSRAM memory to heap allocator[0m
+[0;32mI (823) spi_flash: detected chip: gd[0m
+[0;32mI (823) spi_flash: flash io: qio[0m
+[0;33mW (823) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (824) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (824) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (825) main_task: Started on CPU0[0m
+[0;32mI (835) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (835) main_task: Calling app_main()[0m
+[0;32mI (835) display_image: Network Image Display Example Started[0m
+[0;32mI (855) display_image: Initializing I2C...[0m
+[0;32mI (855) display_image: I2C initialized[0m
+[0;32mI (855) display_image: Initializing SPIFFS[0m
+[0;32mI (905) display_image: Partition size: total: 956561, used: 0[0m
+[0;32mI (905) display_image: Initializing display...[0m
+[0;32mI (905) LVGL: Starting LVGL task[0m
+[0;33mW (905) ledc: GPIO 47 is not usable, maybe conflict with others[0m
+[0;32mI (915) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (915) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (915) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;33mW (1035) ili9341: The 36h command has been used and will be overwritten by external initialization sequence[0m
+[0;33mW (1035) ili9341: The 3Ah command has been used and will be overwritten by external initialization sequence[0m
+[0;32mI (1035) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[0;32mI (1035) gpio: GPIO[3]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1035) GT911: TouchPad_ID:0x39,0x31,0x31[0m
+[0;32mI (1035) GT911: TouchPad_Config_Version:65[0m
+[0;32mI (1035) display_image: Display initialized successfully[0m
+[0;32mI (1035) display_image: LVGL file system driver registered with letter 'S'[0m
+[0;32mI (1235) display_image: Setting display brightness to 100%...[0m
+[0;32mI (1235) ESP-BOX-3: Setting LCD backlight: 100%[0m
+[0;32mI (1235) display_image: Backlight turned on successfully[0m
+[0;32mI (2235) display_image: Creating UI...[0m
+[0;32mI (2235) display_image: Screen resolution: 320x240[0m
+[0;32mI (2235) display_image: UI created, waiting for image upload[0m
+[0;32mI (2235) display_image: UI created, LVGL will refresh asynchronously[0m
+[0;32mI (2235) display_image: Initializing WiFi...[0m
+[0;32mI (2235) pp: pp rom version: e7ae62f[0m
+[0;32mI (2235) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (2245) wifi:wifi driver task: 3fcc2a4c, prio:23, stack:6656, core=0[0m
+[0;32mI (2245) wifi:wifi firmware version: 90929ad727[0m
+[0;32mI (2245) wifi:wifi certification version: v7.0[0m
+[0;32mI (2255) wifi:config NVS flash: enabled[0m
+[0;32mI (2255) wifi:config nano formatting: disabled[0m
+[0;32mI (2255) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2255) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2255) wifi:Init management short buffer num: 32[0m
+[0;32mI (2255) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2255) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (2255) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2255) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2255) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2305) wifi_init: rx ba win: 6[0m
+[0;32mI (2305) wifi_init: accept mbox: 6[0m
+[0;32mI (2305) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2305) wifi_init: udp mbox: 6[0m
+[0;32mI (2305) wifi_init: tcp mbox: 6[0m
+[0;32mI (2305) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2305) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2305) wifi_init: tcp mss: 1440[0m
+[0;32mI (2305) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2305) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2315) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (2345) wifi:mode : sta (74:4d:bd:2e:08:b8)[0m
+[0;32mI (2345) wifi:enable tsf[0m
+[0;32mI (2355) display_image: WiFi initialization finished. Connecting to myssid...[0m
+[0;32mI (4755) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (7165) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (7355) display_image: Starting HTTP server on port: '80'[0m
+[0;32mI (7355) display_image: HTTP server started[0m
+[0;32mI (7355) display_image: Network Image Display Example Initialized[0m
+[0;32mI (7355) display_image: Upload images via HTTP POST to /upload[0m
+[0;32mI (7355) display_image: Check status via HTTP GET /status[0m
+[0;32mI (7355) main_task: Returned from app_main()[0m
+[0;32mI (9565) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (11975) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (14375) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (16785) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (19195) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (21595) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (24005) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (26405) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (28815) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (31215) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (33625) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (36035) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (38435) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (40845) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (43245) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (45655) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (48055) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (50465) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (52875) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (55275) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (57685) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (60085) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (62495) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (64895) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (67305) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (69715) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (72115) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (74525) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (76925) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (79335) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (81735) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (84145) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (86545) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (88955) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (91365) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (93765) display_image: WiFi disconnected, retrying...[0m
+[0;32mI (96175) display_image: WiFi disconnected, retrying...[0m

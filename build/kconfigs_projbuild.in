@@ -3,3 +3,4 @@ source "/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esp_rom/Kconfig.projbuild"
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/esptool_py/Kconfig.projbuild"
 source "/Users/liguang/Documents/xRunda/project/AI/github/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/main/Kconfig.projbuild"

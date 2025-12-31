@@ -6297,6 +6297,34 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": "SSID (network name) for the device to connect to.",
+                "id": "WIFI_SSID",
+                "name": "WIFI_SSID",
+                "range": null,
+                "title": "WiFi SSID",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "WiFi password (WPA or WPA2) for the device to use.",
+                "id": "WIFI_PASSWORD",
+                "name": "WIFI_PASSWORD",
+                "range": null,
+                "title": "WiFi Password",
+                "type": "string"
+            }
+        ],
+        "depends_on": null,
+        "id": "image-display-configuration",
+        "title": "Image Display Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],

@@ -554,6 +554,13 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# Image Display Configuration
+#
+CONFIG_WIFI_SSID="xrunda-iot"
+CONFIG_WIFI_PASSWORD="88888888"
+# end of Image Display Configuration
+
+#
 # Compiler options
 #
 CONFIG_COMPILER_OPTIMIZATION_DEBUG=y

@@ -37,3 +37,7 @@ CONFIG_CODEC_I2C_BACKWARD_COMPATIBLE=y
 # JPEG decoding can take a long time, especially for large images
 CONFIG_ESP_TASK_WDT_TIMEOUT_S=30
 
+# WiFi Configuration
+CONFIG_WIFI_SSID="xrunda-iot"
+CONFIG_WIFI_PASSWORD="88888888"
+
