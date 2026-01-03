@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "displayPic",
-    "project_version":    "f059e0e-dirty",
+    "project_version":    "0a8f96f-dirty",
     "project_path":       "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino",
     "idf_path":           "/Users/liguang/Documents/xRunda/project/AI/github/esp-idf",
     "build_dir":          "/Users/liguang/Documents/xRunda/project/AI/github/esp32Box_displayPic_Arduino/build",

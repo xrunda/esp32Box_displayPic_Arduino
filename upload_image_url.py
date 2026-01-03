@@ -20,16 +20,24 @@ def upload_image_url(device_ip, image_url):
     try:
         # Send as JSON
         data = {"url": image_url}
-        response = requests.post(url, json=data, timeout=60)
+        response = requests.post(url, json=data, timeout=10)  # 减少超时时间，因为现在立即返回
         
         if response.status_code == 200:
             print("✓ Image URL sent successfully!")
             print(f"Response: {response.text}")
+            print("Note: Image is downloading in background...")
             return True
         else:
             print(f"✗ Upload failed with status code: {response.status_code}")
             print(f"Response: {response.text}")
             return False
+    except requests.exceptions.Timeout:
+        print("✗ Request timeout - device may be processing the request")
+        return False
+    except requests.exceptions.ConnectionError as e:
+        print(f"✗ Connection error: {e}")
+        print("  Device may be unreachable or crashed")
+        return False
     except requests.exceptions.RequestException as e:
         print(f"✗ Error sending URL: {e}")
         return False

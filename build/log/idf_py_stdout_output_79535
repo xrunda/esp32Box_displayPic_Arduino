@@ -1,0 +1,194 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009dcc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x170c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xe24
+load:0x403cb700,len:0x317c
+entry 0x403c893c
+[0;32mI (19) boot: ESP-IDF v5.4-398-g473771bc14 2nd stage bootloader[0m
+[0;32mI (19) boot: compile time Jan  3 2026 10:53:00[0m
+[0;32mI (19) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v0.2[0m
+[0;32mI (19) boot: efuse block revision: v1.3[0m
+[0;32mI (20) qio_mode: Enabling QIO for flash chip GD[0m
+[0;32mI (20) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (20) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (20) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (20) boot: Enabling RNG early entropy source...[0m
+[0;32mI (20) boot: Partition Table:[0m
+[0;32mI (21) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (21) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (21) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (22) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (22) boot:  3 spiffs           Unknown data     01 82 00210000 00100000[0m
+[0;32mI (22) boot: End of partition table[0m
+[0;32mI (23) esp_image: segment 0: paddr=00010020 vaddr=3c0f0020 size=3dfe0h (253920) map[0m
+[0;32mI (61) esp_image: segment 1: paddr=0004e008 vaddr=3fca2800 size=02010h (  8208) load[0m
+[0;32mI (63) esp_image: segment 2: paddr=00050020 vaddr=42000020 size=e7248h (946760) map[0m
+[0;32mI (203) esp_image: segment 3: paddr=00137270 vaddr=3fca4810 size=03354h ( 13140) load[0m
+[0;32mI (206) esp_image: segment 4: paddr=0013a5cc vaddr=40378000 size=1a754h (108372) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=00154d28 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (237) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (238) boot: Disabling RNG early entropy source...[0m
+[0;32mI (238) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (239) octal_psram: dev id       : 0x03 (generation 4)[0m
+[0;32mI (239) octal_psram: density      : 0x05 (128 Mbit)[0m
+[0;32mI (239) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (239) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (239) octal_psram: VCC          : 0x00 (1.8V)[0m
+[0;32mI (240) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (240) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (240) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (240) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (241) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (241) MSPI Timing: PSRAM timing tuning index: 6[0m
+[0;32mI (242) esp_psram: Found 16MB PSRAM device[0m
+[0;32mI (242) esp_psram: Speed: 80MHz[0m
+[0;32mI (242) cpu_start: Multicore app[0m
+[0;32mI (839) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (847) cpu_start: Pro cpu start user code[0m
+[0;32mI (847) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (847) app_init: Application information:[0m
+[0;32mI (847) app_init: Project name:     displayPic[0m
+[0;32mI (848) app_init: App version:      0a8f96f-dirty[0m
+[0;32mI (848) app_init: Compile time:     Jan  3 2026 10:52:51[0m
+[0;32mI (848) app_init: ELF file SHA256:  1643488cb...[0m
+[0;32mI (848) app_init: ESP-IDF:          v5.4-398-g473771bc14[0m
+[0;32mI (848) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (848) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (849) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (849) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (849) heap_init: At 3FCAC3F0 len 0003D320 (244 KiB): RAM[0m
+[0;32mI (849) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (849) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (850) esp_psram: Adding pool of 16384K of PSRAM memory to heap allocator[0m
+[0;32mI (851) spi_flash: detected chip: gd[0m
+[0;32mI (851) spi_flash: flash io: qio[0m
+[0;33mW (851) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (852) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (852) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (853) main_task: Started on CPU0[0m
+[0;32mI (863) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (863) main_task: Calling app_main()[0m
+[0;32mI (883) pp: pp rom version: e7ae62f[0m
+[0;32mI (883) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (893) wifi:wifi driver task: 3fcbe068, prio:23, stack:6656, core=0[0m
+[0;32mI (893) wifi:wifi firmware version: 90929ad727[0m
+[0;32mI (893) wifi:wifi certification version: v7.0[0m
+[0;32mI (893) wifi:config NVS flash: enabled[0m
+[0;32mI (903) wifi:config nano formatting: disabled[0m
+[0;32mI (903) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (903) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (903) wifi:Init management short buffer num: 32[0m
+[0;32mI (903) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (903) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (903) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (903) wifi:Init static rx buffer num: 10[0m
+[0;32mI (903) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (903) wifi_init: rx ba win: 6[0m
+[0;32mI (903) wifi_init: accept mbox: 6[0m
+[0;32mI (903) wifi_init: tcpip mbox: 32[0m
+[0;32mI (903) wifi_init: udp mbox: 6[0m
+[0;32mI (903) wifi_init: tcp mbox: 6[0m
+[0;32mI (903) wifi_init: tcp tx win: 5760[0m
+[0;32mI (903) wifi_init: tcp rx win: 5760[0m
+[0;32mI (903) wifi_init: tcp mss: 1440[0m
+[0;32mI (903) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (903) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (903) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (903) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (943) wifi:mode : sta (74:4d:bd:2e:08:b8)[0m
+[0;32mI (943) wifi:enable tsf[0m
+[0;32mI (943) LVGL: Starting LVGL task[0m
+[0;33mW (943) ledc: GPIO 47 is not usable, maybe conflict with others[0m
+[0;32mI (943) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (943) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (943) ili9341: LCD panel create success, version: 1.2.0[0m
+[0;32mI (943) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (943) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (1063) ili9341: The 36h command has been used and will be overwritten by external initialization sequence[0m
+[0;33mW (1063) ili9341: The 3Ah command has been used and will be overwritten by external initialization sequence[0m
+[0;32mI (1063) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[0;32mI (1063) gpio: GPIO[3]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1063) GT911: TouchPad_ID:0x39,0x31,0x31[0m
+[0;32mI (1063) GT911: TouchPad_Config_Version:65[0m
+[0;32mI (1063) ESP-BOX-3: Setting LCD backlight: 100%[0m
+[0;32mI (1943) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1963) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2023) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2023) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2033) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2063) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2093) wifi:connected with xrunda-iot, aid = 2, channel 1, BW20, bssid = 9a:48:74:83:f9:7e[0m
+[0;32mI (2093) wifi:security: WPA2-PSK, phy: bgn, rssi: -74[0m
+[0;32mI (2093) wifi:pm start, type: 1[0m
+
+[0;32mI (2093) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2093) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (2123) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4223) esp_netif_handlers: sta ip: 192.168.1.89, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4313) wifi:<ba-add>idx:0 (ifx:0, 9a:48:74:83:f9:7e), tid:6, ssn:1, winSize:64[0m
+[0;32mI (9073) windmill_control: Initializing windmill control...[0m
+[0;32mI (9073) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (9073) windmill_control: Windmill GPIO 21 initialized[0m
+[0;32mI (9073) mcp_client: Initializing MCP client...[0m
+[0;32mI (9073) mcp_client: Server: wss://api.xiaozhi.me/mcp/[0m
+[0;32mI (9073) mcp_client: Tools: 1[0m
+[0;32mI (9073) mcp_client: Attempting to connect to MCP server...[0m
+[0;32mI (9073) mcp_client: Connecting to MCP server: wss://api.xiaozhi.me/mcp/[0m
+[0;32mI (9073) mcp_client: MCP client initialized[0m
+[0;32mI (9073) windmill_control: Windmill control initialized[0m
+[0;32mI (9073) main_task: Returned from app_main()[0m
+[0;32mI (9193) wifi:<ba-add>idx:1 (ifx:0, 9a:48:74:83:f9:7e), tid:0, ssn:0, winSize:64[0m
+[0;32mI (9683) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10303) mcp_client: Connected to MCP server[0m
+[0;32mI (10323) mcp_client: Received: {"id":0,"jsonrpc":"2.0","method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{"sampling":{},"roots":{"listChanged":false}},"clientInfo":{"name":"xz-mcp-broker","version":"0.0.[0m
+[0;32mI (10323) mcp_client: Received initialize request, sending response[0m
+[0;32mI (10333) mcp_client: Sent initialized notification[0m
+[0;32mI (10733) mcp_client: Received: {"jsonrpc":"2.0","method":"notifications/initialized"}[0m
+[0;32mI (10733) mcp_client: Received MCP method: notifications/initialized[0m
+[0;33mW (10733) mcp_client: Unknown method: notifications/initialized[0m
+[0;32mI (10763) mcp_client: Received: {"id":1,"jsonrpc":"2.0","method":"tools/list","params":{}}[0m
+[0;32mI (10763) mcp_client: Received MCP method: tools/list[0m
+[0;32mI (10763) mcp_client: Responding to tools/list with 1 tools[0m
+[0;32mI (10803) mcp_client: MCP connection established[0m
+[0;32mI (23993) display_image: Received URL request: {"url": "http://res.xrunda.com/ai-test/rs2026.jpg"}[0m
+[0;32mI (23993) display_image: Downloading image from: http://res.xrunda.com/ai-test/rs2026.jpg[0m
+[0;32mI (23993) display_image: Starting download from URL: http://res.xrunda.com/ai-test/rs2026.jpg[0m
+[0;32mI (24733) display_image: Download finished. Data size: 25083[0m
+[0;32mI (25233) display_image: Image displayed via PSRAM (Size: 25083)[0m
+[0;32mI (25233) display_image: HTTP request successful, status: 200[0m
+[0;32mI (25233) display_image: HTTP_EVENT_DISCONNECTED[0m
+Guru Meditation Error: Core  / panic'ed (Cache disabled but cached memory region accessed). 
+Write back error occurred while dcache tries to write back to flash
+The following backtrace may not indicate the code that caused Cache invalid access
+
+
+Core  0 register dump:
+PC      : 0x420daa39  PS      : 0x00060534  A0      : 0x8200da91  A1      : 0x3fcc5fa0  
+A2      : 0x00000000  A3      : 0x3fcc5fe0  A4      : 0x8038501d  A5      : 0x00000000  
+A6      : 0x3fcd11a4  A7      : 0x00000012  A8      : 0x4201c674  A9      : 0x3fcc5ef0  
+A10     : 0x3c10e348  A11     : 0x3fcc5fe0  A12     : 0x00012c00  A13     : 0x00000000  
+A14     : 0x3fcc6050  A15     : 0x3fcd11a4  SAR     : 0x0000001a  EXCCAUSE: 0x00000007  
+EXCVADDR: 0x00000000  LBEG    : 0x40056f5c  LEND    : 0x40056f72  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x420daa36:0x3fcc5fa0 0x4200da8e:0x3fcc5fc0 0x4200db6e:0x3fcc5fe0 0x42015922:0x3fcc6020 0x42015945:0x3fcc6050 0x42016469:0x3fcc6080 0x42016707:0x3fcc60f0 0x42016815:0x3fcc6120 0x420169c6:0x3fcc6140 0x4201b6c1:0x3fcc6170 0x4201b76e:0x3fcc6190 0x4200d8dc:0x3fcc61b0 0x40384c65:0x3fcc61d0
+
+
+Core  1 register dump:
+PC      : 0x40380a42  PS      : 0x00060c34  A0      : 0x82003961  A1      : 0x3fcb0a30  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3fcad8d0  A5      : 0x3fcad8b0  
+A6      : 0x4037a364  A7      : 0x00000001  A8      : 0x82043756  A9      : 0x3fcb09f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x8038501d  A13     : 0x3fcc5dd0  
+A14     : 0x00060023  A15     : 0x3fcb0bf8  SAR     : 0x00000000  EXCCAUSE: 0x00000007  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x40380a3f:0x3fcb0a30 0x4200395e:0x3fcb0a50 0x40385e5d:0x3fcb0a70 0x40384c65:0x3fcb0a90
+
+

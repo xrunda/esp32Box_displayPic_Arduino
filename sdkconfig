@@ -556,8 +556,8 @@ CONFIG_PARTITION_TABLE_MD5=y
 #
 # Image Display Configuration
 #
-CONFIG_WIFI_SSID="CU_thEy"
-CONFIG_WIFI_PASSWORD="uwzp4ka3"
+CONFIG_WIFI_SSID="xrunda-iot"
+CONFIG_WIFI_PASSWORD="88888888"
 # end of Image Display Configuration
 
 #
